@@ -1,0 +1,28 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DisplayCustomer</title>
+</head>
+<body>
+    <div> 
+        Customer id is @Model.id <br />
+        Customer CustomerCode is @Model.CustomerId <br />
+        @if((@Model.amount) > 100)
+        {
+            <text>The  customer priveledged customer. </text>  <br />
+        }
+        else
+        {
+            <text>The customer Is A normal customer.  </text> <br />  
+        }    
+        Customer amount is @Model.amount <br /> 
+    </div>
+</body>
+</html>

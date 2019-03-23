@@ -1,0 +1,34 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FillCustomer</title>
+</head>
+<body>
+    <div> 
+        <!-- Case where we are using HTML Helper -->
+        @using (Html.BeginForm("DisplayCustomer", "Home", FormMethod.Post))
+        {
+
+            <text>Enter customer ID @Html.TextBox("id", (string)Model)</text><br />
+            <text>Enter customer Code @Html.TextBox("CustomerId", (string)Model)</text><br />
+            <text>Enter customer amount @Html.TextBox("amount", (string)Model)</text><br />
+            <text><input type="submit" value="Submit data" /></text> <br />
+        }
+        <!-- Manually writing HTML code for form submittion 
+        <form action="DisplayCustomer" method="post">
+            Customer ID :- <input type="text" name="CustomerId" /><br />
+            Customer Code :- <input type="text" name="CustomerCode" /><br />
+            Customer Amount :- <input type="text" name="CustomerAmount" /><br />
+            <input type="submit" value="Click Here" /><br />
+        </form>
+        -->
+    </div>
+</body>
+</html>
